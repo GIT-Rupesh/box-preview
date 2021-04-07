@@ -1,0 +1,15 @@
+.DS_Store
+.idea
+*.iml
+*.swp
+build/rsync.json
+dist
+functional-tests/output
+jsconfig.json
+node_modules
+npm-debug.log
+reports
+src/i18n/json
+test/screenshots
+test/videos
+yarn-error.log

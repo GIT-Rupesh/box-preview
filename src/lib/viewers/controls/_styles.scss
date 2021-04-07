@@ -1,0 +1,55 @@
+@import '~box-ui-elements/es/styles/variables';
+
+$bp-controls-background: fade-out($black, .2);
+
+@mixin bp-Control--hover {
+    opacity: .7;
+    transition: opacity 150ms;
+    will-change: opacity; // Prevent flickering in Safari
+
+    &:focus,
+    &:hover {
+        opacity: 1;
+    }
+}
+
+@mixin bp-Control--focus {
+    outline: 0;
+
+    &:focus {
+        box-shadow: inset 0 0 0 1px fade-out($white, .5), 0 1px 2px fade-out($black, .9);
+    }
+}
+
+@mixin bp-ControlButton($height: 48px, $width: 48px) {
+    @include bp-Control--hover;
+    @include bp-Control--focus;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $width;
+    height: $height;
+    margin: 0;
+    padding: 0;
+    color: $white;
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    zoom: 1;
+
+    &:disabled {
+        cursor: default;
+        opacity: .2;
+        pointer-events: none;
+    }
+}
+
+@mixin bp-ControlGroup {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+    margin-left: 4px;
+}
