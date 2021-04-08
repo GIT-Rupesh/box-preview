@@ -63,7 +63,7 @@
         "eslint-plugin-react-hooks": "^1.7.0",
         "file-loader": "^4.1.0",
         "fscreen": "^1.0.2",
-        "husky": "^3.1.0",
+        "husky": "^6.0.0",
         "i18n-webpack-plugin": "^1.0.0",
         "jest": "^26.4.0",
         "jest-canvas-mock": "^2.2.0",
@@ -138,7 +138,8 @@
         "test:watch": "yarn test --watch",
         "upgrade:annotations": "./build/upgrade_annotations.sh",
         "upgrade:pdfjs": "./build/upgrade_pdfjs.sh",
-        "upgrade:dependency": "./build/upgrade_dependency.sh"
+        "upgrade:dependency": "./build/upgrade_dependency.sh",
+        "prepare": "husky install"
     },
     "browserslist": [
         "last 2 Chrome versions",
@@ -157,5 +158,10 @@
     },
     "resolutions": {
         "mojito-rb-gen/merge": "1.2.1"
+    },
+    "dependencies": {
+        "python": "^0.0.4",
+        "react-beautiful-dnd": "^13.1.0",
+        "rsync": "^0.6.1"
     }
 }
